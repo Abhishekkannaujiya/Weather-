@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Mouse Events</title>
+  <style>
+    #image {
+      width: 200px;
+      height: 150px;
+      border: 1px solid black;
+    }
+    
+    #text {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="header">JavaScript Mouse Events</h1>
+  <img id="image" src="/IMG-20240920-WA0010.jpg" alt="Example Image">
+  <p id="text">Hover and click on image and text to see events!</p>
+  
+  <script>
+    // Mouse events for image
+    document.getElementById("image").addEventListener("mouseover", function() {
+      this.style.border = "2px solid red";
+      this.style.opacity = "0.5";
+    });
+    
+    document.getElementById("image").addEventListener("mouseout", function() {
+      this.style.border = "1px solid black";
+      this.style.opacity = "1";
+    });
+    
+    document.getElementById("image").addEventListener("click", function() {
+      alert("Image clicked!");
+    });
+    
+    document.getElementById("image").addEventListener("dblclick", function() {
+      alert("Image double-clicked!");
+    });
+    
+    // Mouse events for text
+    document.getElementById("text").addEventListener("mouseover", function() {
+      this.style.color = "blue";
+      this.style.fontSize = "30px";
+    });
+    
+    document.getElementById("text").addEventListener("mouseout", function() {
+      this.style.color = "black";
+      this.style.fontSize = "24px";
+    });
+    
+    document.getElementById("text").addEventListener("click", function() {
+      alert("Text clicked!");
+    });
+    
+    document.getElementById("text").addEventListener("dblclick", function() {
+      alert("Text double-clicked!");
+    });
+    
+    // Mouse events for header
+    document.getElementById("header").addEventListener("mouseover", function() {
+      this.style.color = "green";
+    });
+    
+    document.getElementById("header").addEventListener("mouseout", function() {
+      this.style.color = "black";
+    });
+    
+    document.getElementById("header").addEventListener("click", function() {
+      alert("Header clicked!");
+    });
+  </script>
+</body>
+</html>
+
+
